@@ -1,7 +1,7 @@
 # TP5 – Activité 5-1 : Service de conversion de devise (Java RMI)
 
 **Matière :** Développement d'applications réparties – LSI3 – 2026/2027
-**Étudiant :** Prénom NOM
+**Étudiant :** Wael Riahi
 
 ## Objectif
 Concevoir un service distant RMI qui convertit un montant en euros vers le dinar tunisien (taux fixe : 1 EUR = 3.4 TND).
@@ -26,9 +26,6 @@ conversionClient.jar    (contient uniquement IConversion)
 ## Exécution
 1. Lancer `rmiServer.ConversionServer`.
 2. Lancer `rmiClient.ConversionClient`.
-
-![Serveur](screenshots/serveur.png)
-![Client](screenshots/client.png)
 
 ## Synthèse
 Le client invoque `convertirMontant(500)` sur l'objet distant comme sur un objet local et obtient `500 EUR = 1700.0 TND`. Le serveur affiche chaque requête reçue. Le cycle de vie du service est respecté : définition de l'interface, implémentation, enregistrement dans l'annuaire, puis invocation par le client via le stub. Le client ne connaît que l'interface (jar), jamais l'implémentation.
